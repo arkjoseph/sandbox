@@ -9,13 +9,11 @@
 //
 //});
 // SNAP
+var states = "";
 (function ($, Drupal) {
-
-
-
   var s = new Snap('#map-canvas');
 
-  Snap.load('/modules/contrib/jobs_api/js/usaLow.svg', function (response) {
+  Snap.load('/modules/contrib/jobs_api/js/usaLow.svg', function (response,states) {
       var map = response;
       s.append(map);
       var shadow = s.filter(Snap.filter.shadow(0, 1, 2));
@@ -28,8 +26,10 @@
 
               //create a group and put all the states in it
               var regionVar = s.group();
-              $.each(item.states, function (state, abbr) {
+              var states = item.states;
+              $.each(states, function (state, abbr) {
                   regionVar.append(map.select("#US-"+abbr));
+
               });
 
               // give the group some attributes and hover effects
@@ -79,20 +79,24 @@
 
               // REGION on click events
               regionVar.click(function() {
-                  var allRegions = Snap.selectAll('#r1,#r2,#r3,#r4,#r5,#r6,#r7,#r8,#r9,#r10,#r11');
-                  allRegions.forEach( function(elem,i) {
-                      if( elem != '#r'+item.number) {
-                          elem.unhover().animate({opacity: 0.3}, 300);
-                      }
-                  });
-                  Snap.select('#r'+item.number).unhover().animate({opacity:1, fill: '#eeeadf'},300);
-          if($('.r'+item.number+'-link').length > 0) {
-            var link = $('.r'+item.number+'-link').text();
-            var sanitizedLink = link.replace(/ /g,'')
-            window.location.href = sanitizedLink;
-          } else {
-            window.location.href = '#'+item.link;
-          }
+                var allRegions = Snap.selectAll('#r1,#r2,#r3,#r4,#r5,#r6,#r7,#r8,#r9,#r10,#r11');
+                allRegions.forEach( function(elem,i) {
+                    if( elem != '#r'+item.number) {
+                        elem.unhover().animate({opacity: 0.3}, 300);
+                    }
+                });
+                Snap.select('#r'+item.number).unhover().animate({opacity:1, fill: '#eeeadf'},300);
+                if($('.r'+item.number+'-link').length > 0) {
+                  var link = $('.r'+item.number+'-link').text();
+                  var sanitizedLink = link.replace(/ /g,'')
+                  //window.location.href = sanitizedLink;
+                  //console.log(states);
+                } else {
+                  //window.location.href = '?'+item.link;
+
+                  //console.log(states);
+                  Drupal.jobs_api.feed(states);
+                }
               });
 
               // Draw Markers
@@ -140,9 +144,11 @@
           if($('.r'+item.number+'-link').length > 0) {
               var link = $('.r'+item.number+'-link').text();
               var sanitizedLink = link.replace(/ /g,'')
-              window.location.href = sanitizedLink;
+              //window.location.href = sanitizedLink;
+              //console.log(sanitizedLink);
             } else {
-              window.location.href = 'http://gsa.gov'+item.link;
+              //window.location.href = 'http://gsa.gov'+item.link;
+              //console.log(item.link);
             }
           });
               description.attr({

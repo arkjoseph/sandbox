@@ -10,23 +10,25 @@
 
   Drupal.behaviors.jobs_api = {
     attach: function (context, settings) {
-      Drupal.jobs_api.feed();
-      //Drupal.jobs_api.agency();
+      Drupal.jobs_api.state_select();
       }
     };
 
   //
   // Main jobs feed ajax get request
   //
-  Drupal.jobs_api.feed = function () {
+  Drupal.jobs_api.feed = function (states) {
     var $authKey      = "bLTvp99I05OBhwJAkVSpRv8QfCp9eN+FRqPi7DoIbT0=",
       $host           = "data.usajobs.gov",
       $userAgent      = "joseph.garrido@gsa.gov",
-      $q_location     = "Washington,+DC",
+      $state_array    = states.join(";"),
+      $q_location     = $state_array,
       $q_keyword      = "GSA",
       $q_organization = "GS",
       $url_request    = "https://data.usajobs.gov/api/search?Organization='"+$q_organization+"'&LocationName='" + $q_location +"'",
       $clean_url      = $url_request.replace(/'/g,"");
+
+    console.log($clean_url);
 
     //$(".json-content").once(function (){
       $.ajax({
@@ -49,7 +51,7 @@
                 desc       = value.UserArea.Details.JobSummary,
                 org        = value.DepartmentName;
 
-            $(".json-content").append("<li>" +
+            $(".json-content").html("<li>" +
               "<a target='_blank' href='"+ uri +"' data-position-id='" + positionid + "'>" + title + "</a> &mdash; '"+ location +"' " +
               "<ul>" +
                 //"<li><p>"+ desc +"</p></li>" +
@@ -62,23 +64,9 @@
       //});
     });
   };
-
-  //
-  // Custom Search - Agency Sub Elements
-  //
-  Drupal.jobs_api.agency = function () {
-    var $authKey = "bLTvp99I05OBhwJAkVSpRv8QfCp9eN+FRqPi7DoIbT0=";
-    $.ajax({
-      url: "https://data.usajobs.gov/api/codelist/agencysubelements",
-      type: "GET",
-      headers: {
-        "Authorization-Key": $authKey,
-        "Content-Type": "application/json"
-      },
-      dataType: "json",
-      success: function(data){
-        console.log("success!");
-      }
-    });
+  Drupal.jobs_api.state_select = function () {
+    // Fire off ajax feed when ready
+    //$("[id^=US-]").click(function(){
+    //});
   }
 })(jQuery,Drupal);
