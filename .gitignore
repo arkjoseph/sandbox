@@ -15,6 +15,9 @@ robots.txt
 /MAINTAINERS.txt
 /UPGRADE.txt
 /README.txt
+composer.*
+example.gitignore
+autoload.php
 sites/README.txt
 sites/all/modules/README.txt
 sites/all/themes/README.txt
