@@ -1,0 +1,20 @@
+<?php
+/**
+ *
+ * @ingroup jobs_api
+ * @{
+ * Implements hook_theme().
+ *
+ */
+function jobs_api_theme() {
+  return array(
+    'jobs_api' => array(
+      'template' => 'jobsapi',
+      'variables' => array('title' => NULL),
+    ),
+  );
+}
+
+/**
+ * @} End of hook.
+ */

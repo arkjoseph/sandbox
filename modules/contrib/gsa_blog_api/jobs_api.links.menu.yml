@@ -1,0 +1,5 @@
+# Define default links for this module.
+jobs_api.api:
+  title: USA Jobs Feed
+  description: USA Jobs Feed.
+  route_name: jobs_api.api

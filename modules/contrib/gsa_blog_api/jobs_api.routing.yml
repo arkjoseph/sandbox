@@ -1,0 +1,7 @@
+jobs_api.api:
+  path: '/jobs-api'
+  defaults:
+    _title: 'USA JOBS Feed'
+    _controller: '\Drupal\jobs_api\Controller\JobsApiController::getJobsApiImplementation'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,612 @@
+{
+  "LanguageCode": "EN",
+  "SearchParameters": {},
+  "SearchResult": {
+    "SearchResultCount": 5,
+    "SearchResultCountAll": 25,
+    "SearchResultItems": [
+      {
+        "MatchedObjectId": "468203500",
+        "MatchedObjectDescriptor": {
+          "PositionID": "1711019SOMP",
+          "PositionTitle": "Small Business Specialist",
+          "PositionURI": "https://www.usajobs.gov:443/GetJob/ViewDetails/468203500",
+          "ApplyURI": [
+            "https://www.usajobs.gov:443/GetJob/ViewDetails/468203500?PostingChannelID=RESTAPI"
+          ],
+          "PositionLocationDisplay": "Washington DC, District of Columbia",
+          "PositionLocation": [
+            {
+              "LocationName": "Washington DC, District of Columbia",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "District of Columbia",
+              "CityName": "Washington DC, District of Columbia",
+              "Longitude": -77.032,
+              "Latitude": 38.8904
+            }
+          ],
+          "OrganizationName": "Office of Small Business Utilization",
+          "DepartmentName": "General Services Administration",
+          "JobCategory": [
+            {
+              "Name": "General Business And Industry",
+              "Code": "1101"
+            }
+          ],
+          "JobGrade": [
+            {
+              "Code": "GS"
+            }
+          ],
+          "PositionSchedule": [
+            {
+              "Name": "Full-time",
+              "Code": "1"
+            }
+          ],
+          "PositionOfferingType": [
+            {
+              "Name": "Permanent",
+              "Code": "15317"
+            }
+          ],
+          "QualificationSummary": "NOTE: Qualifications are based on length and level of experience. Therefore, in addition to describing duties performed, applicants must provide the exact dates of each period of employment (from month/year to month/year) and the number of hours per week if part time. Qualification determinations cannot be made when resumes do not include the required information, so failure to provide this information may result in disqualification. For a brief video on How to Create a Federal Resume, click here. Experience refers to paid and unpaid experience, including volunteer work done through National Service programs (e.g., Peace Corps, AmeriCorps) and other organizations (e.g., professional; philanthropic; religious; spiritual; community, student, social). AmeriCorps, Peace Corps, and other national service alumni are encouraged to apply.The GS-13 salary range starts at $94,796 per year. Generally, first time appointees to Federal civilian service have their salary set at the beginning rate of the grade for which they are selected; unless prior approval has been received to adjust the salary based on superior qualifications of the applicant.You must meet all qualification and eligibility requirements within 30 days of the closing date of this announcement. To qualify, you must demonstrate at least one year specialized experience equivalent to the GS-12 level in the Federal service:Specialized experience is experience providing advice and assistance to the business community on the Federal procurement/contracting process and the development of marketing strategies and materials. Examples of such experience include: developing marketing strategies and materials to promote the sales of goods and services of an organization; organizing procurement networking services; developing and presenting workshops to assist small, minority, and disadvantage businesses in dealing with a Federal agency.",
+          "PositionRemuneration": [
+            {
+              "MinimumRange": "94796.0",
+              "MaximumRange": "123234.0",
+              "RateIntervalCode": "Per Year"
+            }
+          ],
+          "PositionStartDate": "2017-04-20",
+          "PositionEndDate": "2017-05-01",
+          "PublicationStartDate": "2017-04-20",
+          "ApplicationCloseDate": "2017-05-01",
+          "PositionFormattedDescription": [
+            {
+              "Label": "Dynamic Teaser",
+              "LabelDescription": "Hit highlighting for keyword searches."
+            }
+          ],
+          "UserArea": {
+            "Details": {
+              "JobSummary": "IMPORTANT: Unless you are a GSA or Land Management employee as described in the Who Can Apply section your application will not be considered. Do not apply to this announcement. As a Small Business Specialist, you will advise a variety of business organizations throughout the regional area you service on small business programs and initiatives.You will report to GSA Central Office in Washington, DC and will be physically located in the Office of Small Business Utilization. This is not a virtual positionThis office is responsible for advocating for small, minority, veteran, HUBZone, and women buisiness owners. OSBU has nationwide responsibility for GSA's small business programs and promote increased access to GSA's nationwide procurement opportunities.GSA has been repeatedly named as one of the 'Best Places to Work' in the Federal Government'. LEARN MORE about why you should choose GSA.)GSA offers its employees a wide range of benefits including: Federal health insurance plans (choose from a wide range of plans); Life insurance coverage with several options to choose from; Leave policies to help you take care of your personal, recreational, and health care needs; Thrift Savings Plan (similar to a 401(k) plan); Flexible work schedules and telework; Transit and child care subsidies; and Training and development.At this time we are only filling one vacancy, however additional vacancies may be filled from this announcement as needed.",
+              "WhoMayApply": {
+                "Name": "Your application will be considered if you are a:Internal Employees/Agency Employees OnlyLand Management current or former employee",
+                "Code": "15669"
+              },
+              "LowGrade": "13",
+              "HighGrade": "13"
+            },
+            "IsRadialSearch": false
+          }
+        },
+        "RelevanceRank": 0
+      },
+      {
+        "MatchedObjectId": "468187900",
+        "MatchedObjectDescriptor": {
+          "PositionID": "1700258AAMP",
+          "PositionTitle": "Supervisory Program Manager",
+          "PositionURI": "https://www.usajobs.gov:443/GetJob/ViewDetails/468187900",
+          "ApplyURI": [
+            "https://www.usajobs.gov:443/GetJob/ViewDetails/468187900?PostingChannelID=RESTAPI"
+          ],
+          "PositionLocationDisplay": "Washington DC, District of Columbia",
+          "PositionLocation": [
+            {
+              "LocationName": "Washington DC, District of Columbia",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "District of Columbia",
+              "CityName": "Washington DC, District of Columbia",
+              "Longitude": -77.032,
+              "Latitude": 38.8904
+            }
+          ],
+          "OrganizationName": "Office of Small Business Utilization",
+          "DepartmentName": "General Services Administration",
+          "JobCategory": [
+            {
+              "Name": "General Business And Industry",
+              "Code": "1101"
+            }
+          ],
+          "JobGrade": [
+            {
+              "Code": "GS"
+            }
+          ],
+          "PositionSchedule": [
+            {
+              "Name": "Full-time",
+              "Code": "1"
+            }
+          ],
+          "PositionOfferingType": [
+            {
+              "Name": "Permanent",
+              "Code": "15317"
+            }
+          ],
+          "QualificationSummary": "NOTE: Qualifications are based on length and level of experience. Therefore, in addition to describing duties performed, applicants must provide the exact dates of each period of employment (from month/year to month/year) and the number of hours per week if part time. Qualification determinations cannot be made when resumes do not include the required information, so failure to provide this information may result in disqualification. For a brief video on How to Create a Federal Resume, click here. Experience refers to paid and unpaid experience, including volunteer work done through National Service programs (e.g., Peace Corps, AmeriCorps) and other organizations (e.g., professional; philanthropic; religious; spiritual; community, student, social). AmeriCorps, Peace Corps, and other national service alumni are encouraged to apply.The GS-15 salary range starts at $ 131,767.00 per year. Generally, first time appointees to Federal civilian service have their salary set at the beginning rate of the grade for which they are selected; unless prior approval has been received to adjust the salary based on superior qualifications of the applicant.You must meet all qualification and eligibility requirements within 30 days of the closing date of this announcement. To qualify, you must demonstrate specialized experience equivalent to at least the GS-14 level in the Federal service. Examples of such experience are: Specialized experience is experience supervising/leading and managing a branch, section or major program component of a performance based fee-for-service agency or organization that included strategic planning, operations management, business development, change management and service delivery. Technical expertise is required in one or more of the following: financial management, project management, acquisition, and organizational development services.",
+          "PositionRemuneration": [
+            {
+              "MinimumRange": "131767.0",
+              "MaximumRange": "161900.0",
+              "RateIntervalCode": "Per Year"
+            }
+          ],
+          "PositionStartDate": "2017-04-20",
+          "PositionEndDate": "2017-05-01",
+          "PublicationStartDate": "2017-04-20",
+          "ApplicationCloseDate": "2017-05-01",
+          "PositionFormattedDescription": [
+            {
+              "Label": "Dynamic Teaser",
+              "LabelDescription": "Hit highlighting for keyword searches."
+            }
+          ],
+          "UserArea": {
+            "Details": {
+              "JobSummary": "IMPORTANT: Unless you are a GSA or Land Management employee as described in the Who Can Apply section your application will not be considered. Do not apply to this announcement. As a Supervisory Program manager, you will manage and direct the work of the Outreach and Customer Care Program, serves as the chief spokesperson and focal point for overall workforce development system activities and issues within the scope of responsibility of the Outreach Program: brings together the staff resources of the Outreach Program to facilitate the exchange of information; and coordinates the resolution of issues, and implementation of action plans as appropriate, ensuring that all program efforts are strategically aligned in furtherance of developing an effective workforce development system that benefits small businesses, manages the budget process for the entire OSBU organization.This position is located in the Office of Small Business Utilization. This office is responsible for advocating for small, minority, veteran, HUBZone, and women business owners. OSBU engages in activities that make it possible for the small business community to meet key contracting experts and be counseled on the procurement process. OSBU monitors and implements small business policies and manage a range of programs mandated by law.GSA has been repeatedly named as one of the 'Best Places to Work' in the Federal Government'. LEARN MORE about why you should choose GSA.)GSA offers its employees a wide range of benefits including: Federal health insurance plans (choose from a wide range of plans); Life insurance coverage with several options to choose from; Leave policies to help you take care of your personal, recreational, and health care needs; Thrift Savings Plan (similar to a 401(k) plan); Flexible work schedules and telework; Transit and child care subsidies; and Training and development.At this time we are only filling one vacancy, however additional vacancies may be filled from this announcement as needed.",
+              "WhoMayApply": {
+                "Name": "Your application will be considered if you are a:Internal Employees/Agency Employees OnlyLand Management current or former employee",
+                "Code": "15669"
+              },
+              "LowGrade": "15",
+              "HighGrade": "15"
+            },
+            "IsRadialSearch": false
+          }
+        },
+        "RelevanceRank": 0
+      },
+      {
+        "MatchedObjectId": "468505900",
+        "MatchedObjectDescriptor": {
+          "PositionID": "1710410RGOTR",
+          "PositionTitle": "Student Trainee (Management & Program Analyst)",
+          "PositionURI": "https://www.usajobs.gov:443/GetJob/ViewDetails/468505900",
+          "ApplyURI": [
+            "https://www.usajobs.gov:443/GetJob/ViewDetails/468505900?PostingChannelID=RESTAPI"
+          ],
+          "PositionLocationDisplay": "Auburn, Washington",
+          "PositionLocation": [
+            {
+              "LocationName": "Auburn, Washington",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "Washington",
+              "CityName": "Auburn, Washington",
+              "Longitude": -122.230408,
+              "Latitude": 47.3074
+            }
+          ],
+          "OrganizationName": "Federal Acquisition Service",
+          "DepartmentName": "General Services Administration",
+          "JobCategory": [
+            {
+              "Name": "Administration And Office Support Student Trainee",
+              "Code": "0399"
+            }
+          ],
+          "JobGrade": [
+            {
+              "Code": "GS"
+            }
+          ],
+          "PositionSchedule": [
+            {
+              "Name": "Full-Time\nPart-Time",
+              "Code": "1"
+            }
+          ],
+          "PositionOfferingType": [
+            {
+              "Name": "Excepted Appointment - Not-to-Exceed 9/30/2017",
+              "Code": "15328"
+            }
+          ],
+          "QualificationSummary": "The GS-05 salary range starts at $35,464 per year. Generally, first time appointees to Federal civilian service have their salary set at the beginning rate of the grade for which they are selected; unless prior approval has been received to adjust the salary based on superior qualifications of the applicant. You must meet all qualification and eligibility requirements within 30 days of the closing date of this announcement. To qualify, you must meet the following:Successful completion of a full 4-year course of study leading to a bachelor's degree from an accredited college or university or three years of general experience, at least one of which was equivalent to the GS-04 level in the Federal service. General experience is experience that demonstrates the ability to analyze problems to identify significant factors, gather pertinent data, and recognize solutions; plan and organize work; and communicate effectively orally and in writing. Or a combination of post high school education from an accredited college or university and appropriate experience that together meet the qualification requirements of this position.NOTE: Qualifications are based on length and level of experience. Therefore, in addition to describing duties performed, applicants must provide the exact dates of each period of employment (from month/year to month/year) and the number of hours per week if part time. Qualification determinations cannot be made when resumes do not include the required information, so failure to provide this information may result in disqualification. For a brief video on How to Create a Federal Resume, click here.Experience refers to paid and unpaid experience, including volunteer work done through National Service programs (e.g., Peace Corps, AmeriCorps) and other organizations (e.g., professional; philanthropic; religious; spiritual; community, student, social). AmeriCorps, Peace Corps, and other national service alumni are encouraged to apply. NOTE: An unofficial copy of your current transcripts must be provided to show you meet the educational requirement AND to show you meet the student eligibility requirement.",
+          "PositionRemuneration": [
+            {
+              "MinimumRange": "35464.0",
+              "MaximumRange": "46109.0",
+              "RateIntervalCode": "Per Year"
+            }
+          ],
+          "PositionStartDate": "2017-04-25",
+          "PositionEndDate": "2017-05-04",
+          "PublicationStartDate": "2017-04-25",
+          "ApplicationCloseDate": "2017-05-04",
+          "PositionFormattedDescription": [
+            {
+              "Label": "Dynamic Teaser",
+              "LabelDescription": "Hit highlighting for keyword searches."
+            }
+          ],
+          "UserArea": {
+            "Details": {
+              "JobSummary": "GSA has been repeatedly named as one of the 'Best Places to Work' in the Federal Government'. LEARN MORE about why you should choose GSA.As a Student Trainee (Management and Program Analyst), you will perform special assignments designed to assist the Office of Contract Operations at GSA. This position is located in the General Services Administration, Federal Acquisition Service, Northwest/Arctic Region and is located in Auburn, WA.At this time we are only filling five vacancies; however, additional vacancies may be filled from this announcement as needed.THIS IS AN EXCEPTED APPOINTMENT UNDER THE PATHWAYS INTERN PROGRAM THAT WILL END PRIOR TO OR ON SEPTEMBER 30, 2017.This Program is designed to provide students enrolled in a wide variety of educational institutions, from high school to graduate level, with opportunities to work in agencies and explore Federal careers while still in school and while getting paid for the work performed. Additional information about the Internship Program can be found at http://www.opm.gov/HiringReform/Pathways/program/interns/",
+              "WhoMayApply": {
+                "Name": "Enrolled students who are enrolled at least half-time in an accredited high school, college (including 4-year colleges/universities, community colleges, and junior colleges); professional, technical, vocational, and trade school; advanced degree programs; or other qualifying educational institution pursuing a quality degree or certificate.",
+                "Code": "15669"
+              },
+              "LowGrade": "05",
+              "HighGrade": "05"
+            },
+            "IsRadialSearch": false
+          }
+        },
+        "RelevanceRank": 0
+      },
+      {
+        "MatchedObjectId": "468423700",
+        "MatchedObjectDescriptor": {
+          "PositionID": "1700257JCDE",
+          "PositionTitle": "Innovation Specialist",
+          "PositionURI": "https://www.usajobs.gov:443/GetJob/ViewDetails/468423700",
+          "ApplyURI": [
+            "https://www.usajobs.gov:443/GetJob/ViewDetails/468423700?PostingChannelID=RESTAPI"
+          ],
+          "PositionLocationDisplay": "Multiple Locations",
+          "PositionLocation": [
+            {
+              "LocationName": "San Francisco, California",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "California",
+              "CityName": "San Francisco, California",
+              "Longitude": -122.4196,
+              "Latitude": 37.7771
+            },
+            {
+              "LocationName": "Washington DC, District of Columbia",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "District of Columbia",
+              "CityName": "Washington DC, District of Columbia",
+              "Longitude": -77.032,
+              "Latitude": 38.8904
+            },
+            {
+              "LocationName": "Chicago, Illinois",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "Illinois",
+              "CityName": "Chicago, Illinois",
+              "Longitude": -87.63241,
+              "Latitude": 41.88415
+            },
+            {
+              "LocationName": "New York, New York",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "New York",
+              "CityName": "New York, New York",
+              "Longitude": -74.0071,
+              "Latitude": 40.7146
+            },
+            {
+              "LocationName": "Chicago, Illinois",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "Illinois",
+              "CityName": "Chicago, Illinois",
+              "Longitude": -87.63241,
+              "Latitude": 41.88415
+            },
+            {
+              "LocationName": "Dallas, Texas",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "Texas",
+              "CityName": "Dallas, Texas",
+              "Longitude": -96.7954,
+              "Latitude": 32.7781563
+            },
+            {
+              "LocationName": "Denver, Colorado",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "Colorado",
+              "CityName": "Denver, Colorado",
+              "Longitude": -104.992256,
+              "Latitude": 39.74001
+            },
+            {
+              "LocationName": "Washington DC, District of Columbia",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "District of Columbia",
+              "CityName": "Washington DC, District of Columbia",
+              "Longitude": -77.032,
+              "Latitude": 38.8904
+            },
+            {
+              "LocationName": "Atlanta, Georgia",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "Georgia",
+              "CityName": "Atlanta, Georgia",
+              "Longitude": -84.39111,
+              "Latitude": 33.7483139
+            },
+            {
+              "LocationName": "Seattle, Washington",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "Washington",
+              "CityName": "Seattle, Washington",
+              "Longitude": -122.329453,
+              "Latitude": 47.60358
+            },
+            {
+              "LocationName": "Los Angeles, California",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "California",
+              "CityName": "Los Angeles, California",
+              "Longitude": -118.245,
+              "Latitude": 34.0535
+            },
+            {
+              "LocationName": "New York, New York",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "New York",
+              "CityName": "New York, New York",
+              "Longitude": -74.0071,
+              "Latitude": 40.7146
+            },
+            {
+              "LocationName": "San Francisco, California",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "California",
+              "CityName": "San Francisco, California",
+              "Longitude": -122.4196,
+              "Latitude": 37.7771
+            },
+            {
+              "LocationName": "Boston, Massachusetts",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "Massachusetts",
+              "CityName": "Boston, Massachusetts",
+              "Longitude": -71.0567,
+              "Latitude": 42.3586349
+            }
+          ],
+          "OrganizationName": "Technology Transformation Service",
+          "DepartmentName": "General Services Administration",
+          "JobCategory": [
+            {
+              "Name": "Miscellaneous Administration And Program",
+              "Code": "0301"
+            }
+          ],
+          "JobGrade": [
+            {
+              "Code": "GS"
+            }
+          ],
+          "PositionSchedule": [
+            {
+              "Name": "Full Time",
+              "Code": "1"
+            }
+          ],
+          "PositionOfferingType": [
+            {
+              "Name": "Not to exceed 2 years; may be extended for an additional 2 years for a maximum of 4 years total.",
+              "Code": "15319"
+            }
+          ],
+          "QualificationSummary": "Qualifications are based on length and level of experience. Therefore, in addition to describing duties performed, applicants must provide the exact dates of each period of employment (from month/year to month/year) and the number of hours per week if part time. Qualification determinations cannot be made when resumes do not include the required information, so failure to provide this information may result in disqualification. Applicants applying for this job must meet the following requirements:Have product management related experience demonstrating each of the five competencies and specialized experience listed below:Software Engineering Technical Experience: Ability to use software engineering technologies to deliver technical solutions and products.Software Engineering Practices: Ability to apply tools, technologies, and established engineering best practices to help deliver innovative technical solutions and products.Communication: Ability to communicate effectively with a variety of audiences to establish a shared vision and understanding of a project&#8217;s technical implementation, objectives and goals.Technical Leadership: The ability to provide technical leadership, mastery, and architecture on engineering projects.18F Core Values Alignment: The ability to work with integrity, transparency and resiliency in civic minded or high impact environment. To qualify at a GS-14 level you must demonstrate at least one year of specialized experience at the next lower grade level GS-13 in the federal services or equivalent:Use of innovative software engineering technologies such as dynamic programming languages, relational and/or non-relational database programming, web development, containerization, cloud technologies, infrastructure automation, configuration management, and/or unix-based operating systems. Experience with software engineering best practices such as open source, source control, automated testing, continuous integration and deployment, and peer review.Working on cross-functional, multidisciplinary teams that deliver digital products and services in an incremental, user-focused environment.Developing and communicating technical architecture and vision, and responsibility for planning and implementation of that vision.",
+          "PositionRemuneration": [
+            {
+              "MinimumRange": "88136.0",
+              "MaximumRange": "114578.0",
+              "RateIntervalCode": "Per Year"
+            }
+          ],
+          "PositionStartDate": "2017-04-24",
+          "PositionEndDate": "2017-04-28",
+          "PublicationStartDate": "2017-04-24",
+          "ApplicationCloseDate": "2017-04-28",
+          "PositionFormattedDescription": [
+            {
+              "Label": "Dynamic Teaser",
+              "LabelDescription": "Hit highlighting for keyword searches."
+            }
+          ],
+          "UserArea": {
+            "Details": {
+              "JobSummary": "GSA has been repeatedly named as one of the 'Best Places to Work' in the Federal Government'. LEARN MORE about why you should choose GSA.)This is a Schedule A position under 5 CFR 213.3102(r) to hire unique technical skills to develop innovative digital tools and services in the Excepted Services, US Digital Service 18F Fellowship Program. The 18F office is charged with developing innovative digital tools and services and uses lean startup and agile development principles to collaborate with other agencies to fix technical problems, build products, and improve how government serves the public through technology.As an Innovation Specialist, the team member serves the government and makes an impact on a massive scale. The position requires that fellows perform work of an exceptional degree of difficulty across a wide range of topics at the convergence of technology, policy, and delivery. The incumbent leverages their experience deploying high quality, user centric platforms and services to lead major initiatives, consult on systems and policy proposal, and provide technical, policy, and programmatic guidance to government. The position involves access to personally identifiable information (PII) data.Duty Locations: Washington, DC; San Francisco, CA; Chicago, IL; New York, NY; or Virtual (100% remote)",
+              "WhoMayApply": {
+                "Name": "All United States citizens and nationals (residents of American Samoa and Swains Islands)",
+                "Code": "15669"
+              },
+              "LowGrade": "14",
+              "HighGrade": "14"
+            },
+            "IsRadialSearch": false
+          }
+        },
+        "RelevanceRank": 0
+      },
+      {
+        "MatchedObjectId": "468424400",
+        "MatchedObjectDescriptor": {
+          "PositionID": "1700259JCDE",
+          "PositionTitle": "Innovation Specialist",
+          "PositionURI": "https://www.usajobs.gov:443/GetJob/ViewDetails/468424400",
+          "ApplyURI": [
+            "https://www.usajobs.gov:443/GetJob/ViewDetails/468424400?PostingChannelID=RESTAPI"
+          ],
+          "PositionLocationDisplay": "Multiple Locations",
+          "PositionLocation": [
+            {
+              "LocationName": "San Francisco, California",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "California",
+              "CityName": "San Francisco, California",
+              "Longitude": -122.4196,
+              "Latitude": 37.7771
+            },
+            {
+              "LocationName": "Washington DC, District of Columbia",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "District of Columbia",
+              "CityName": "Washington DC, District of Columbia",
+              "Longitude": -77.032,
+              "Latitude": 38.8904
+            },
+            {
+              "LocationName": "Chicago, Illinois",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "Illinois",
+              "CityName": "Chicago, Illinois",
+              "Longitude": -87.63241,
+              "Latitude": 41.88415
+            },
+            {
+              "LocationName": "New York, New York",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "New York",
+              "CityName": "New York, New York",
+              "Longitude": -74.0071,
+              "Latitude": 40.7146
+            },
+            {
+              "LocationName": "Chicago, Illinois",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "Illinois",
+              "CityName": "Chicago, Illinois",
+              "Longitude": -87.63241,
+              "Latitude": 41.88415
+            },
+            {
+              "LocationName": "Dallas, Texas",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "Texas",
+              "CityName": "Dallas, Texas",
+              "Longitude": -96.7954,
+              "Latitude": 32.7781563
+            },
+            {
+              "LocationName": "Denver, Colorado",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "Colorado",
+              "CityName": "Denver, Colorado",
+              "Longitude": -104.992256,
+              "Latitude": 39.74001
+            },
+            {
+              "LocationName": "Washington DC, District of Columbia",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "District of Columbia",
+              "CityName": "Washington DC, District of Columbia",
+              "Longitude": -77.032,
+              "Latitude": 38.8904
+            },
+            {
+              "LocationName": "Atlanta, Georgia",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "Georgia",
+              "CityName": "Atlanta, Georgia",
+              "Longitude": -84.39111,
+              "Latitude": 33.7483139
+            },
+            {
+              "LocationName": "Seattle, Washington",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "Washington",
+              "CityName": "Seattle, Washington",
+              "Longitude": -122.329453,
+              "Latitude": 47.60358
+            },
+            {
+              "LocationName": "Los Angeles, California",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "California",
+              "CityName": "Los Angeles, California",
+              "Longitude": -118.245,
+              "Latitude": 34.0535
+            },
+            {
+              "LocationName": "New York, New York",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "New York",
+              "CityName": "New York, New York",
+              "Longitude": -74.0071,
+              "Latitude": 40.7146
+            },
+            {
+              "LocationName": "San Francisco, California",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "California",
+              "CityName": "San Francisco, California",
+              "Longitude": -122.4196,
+              "Latitude": 37.7771
+            },
+            {
+              "LocationName": "Boston, Massachusetts",
+              "CountryCode": "United States",
+              "CountrySubDivisionCode": "Massachusetts",
+              "CityName": "Boston, Massachusetts",
+              "Longitude": -71.0567,
+              "Latitude": 42.3586349
+            }
+          ],
+          "OrganizationName": "Technology Transformation Service",
+          "DepartmentName": "General Services Administration",
+          "JobCategory": [
+            {
+              "Name": "Miscellaneous Administration And Program",
+              "Code": "0301"
+            }
+          ],
+          "JobGrade": [
+            {
+              "Code": "GS"
+            }
+          ],
+          "PositionSchedule": [
+            {
+              "Name": "Full Time",
+              "Code": "1"
+            }
+          ],
+          "PositionOfferingType": [
+            {
+              "Name": "Not to exceed 2 years; may be extended for an additional 2 years for a maximum of 4 years total.",
+              "Code": "15319"
+            }
+          ],
+          "QualificationSummary": "Qualifications are based on length and level of experience. Therefore, in addition to describing duties performed, applicants must provide the exact dates of each period of employment (from month/year to month/year) and the number of hours per week if part time. Qualification determinations cannot be made when resumes do not include the required information, so failure to provide this information may result in disqualification. Applicants applying for this job must meet the following requirements: Have product management related experience demonstrating each of the five competencies and specialized experience listed below: Software Engineering Technical Experience: Ability to use software engineering technologies to deliver technical solutions and products.Software Engineering Practices: Ability to apply tools, technologies, and established engineering best practices to help deliver innovative technical solutions and products. Communication: Ability to communicate effectively with a variety of audiences to establish a shared vision and understanding of a project&#8217;s technical implementation, objectives and goals.Technical Leadership: The ability to provide technical leadership, mastery, and architecture on complex engineering projects. 18F Core Values Alignment: The ability to work with integrity, transparency and resiliency in civic minded or high impact environment. To qualify at a GS-15 level you must demonstrate at least one year of specialized experience at the next lower grade level GS-14 in the federal service or equivalent: Use of innovative software engineering technologies such as dynamic programming languages, relational and/or non-relational database programming, web development, containerization, cloud technologies, infrastructure automation, configuration management, and/or unix-based operating systems. Experience with software engineering best practices such as open source, source control, automated testing, continuous integration and deployment, and peer review.Working on cross-functional, multidisciplinary teams that deliver digital products and services in an incremental, user-focused environment.Technical leadership of projects with cutting edge or complex technology, missions, or stakeholders, or a high degree of uncertainty, such as greenfield/startups, legacy migrations, projects at scale, or integrations.Expert-level experience in software engineering tools or practices, as demonstrated through technical publications, speaking engagements at technical conferences, and/or participation in the core communities of broadly-used technologies.",
+          "PositionRemuneration": [
+            {
+              "MinimumRange": "103672.0",
+              "MaximumRange": "134776.0",
+              "RateIntervalCode": "Per Year"
+            }
+          ],
+          "PositionStartDate": "2017-04-24",
+          "PositionEndDate": "2017-04-28",
+          "PublicationStartDate": "2017-04-24",
+          "ApplicationCloseDate": "2017-04-28",
+          "PositionFormattedDescription": [
+            {
+              "Label": "Dynamic Teaser",
+              "LabelDescription": "Hit highlighting for keyword searches."
+            }
+          ],
+          "UserArea": {
+            "Details": {
+              "JobSummary": "GSA has been repeatedly named as one of the 'Best Places to Work' in the Federal Government'. LEARN MORE about why you should choose GSA.)This is a Schedule A position under 5 CFR 213.3102(r) to hire unique technical skills to develop innovative digital tools and services in the Excepted Services, US Digital Service 18F Fellowship Program. The 18F office is charged with developing innovative digital tools and services and uses lean startup and agile development principles to collaborate with other agencies to fix technical problems, build products, and improve how government serves the public through technology.As an Innovation Specialist, the team member serves the government and makes an impact on a massive scale. The position requires that fellows perform work of an exceptional degree of difficulty across a wide range of topics at the convergence of technology, policy, and delivery. The incumbent leverages their experience deploying high quality, user centric platforms and services to lead major initiatives, consult on systems and policy proposal, and provide technical, policy, and programmatic guidance to government. The position involves access to personally identifiable information (PII) data.Duty Locations: Washington, DC; San Francisco, CA; Chicago, IL; New York, NY; or Virtual (100% remote)",
+              "WhoMayApply": {
+                "Name": "All United States citizens and nationals (residents of American Samoa and Swains Islands)",
+                "Code": "15669"
+              },
+              "LowGrade": "15",
+              "HighGrade": "15"
+            },
+            "IsRadialSearch": false
+          }
+        },
+        "RelevanceRank": 0
+      }
+    ],
+    "UserArea": {
+      "NumberOfPages": "5",
+      "IsRadialSearch": false
+    }
+  }
+}

@@ -1,0 +1,11 @@
+# A simple script using jquery ui accordion.
+jobs_api.api:
+  js:
+    js/jobs_api.js: {}
+    js/snap.svg-min.js: {}
+    js/snap_plugins.js: {}
+    js/regional_map_custom.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
