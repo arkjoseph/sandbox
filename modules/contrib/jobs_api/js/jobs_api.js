@@ -8,12 +8,6 @@
 
   Drupal.jobs_api = {};
 
-  Drupal.behaviors.jobs_api = {
-    attach: function (context, settings) {
-      Drupal.jobs_api.state_select();
-      }
-    };
-
   //
   // Main jobs feed ajax get request
   //
@@ -42,31 +36,46 @@
         //cache: true,
         dataType: "json",
         success: function(data){
+          $(".json-content").empty();
+          $(".error").hide();
           $.each(data.SearchResult.SearchResultItems, function(key,value){
             var value    = this.MatchedObjectDescriptor,
                 title      = value.PositionTitle,
                 positionid = value.PositionID,
                 uri        = value.PositionURI,
-                location   = value.PositionLocationDisplay,
                 desc       = value.UserArea.Details.JobSummary,
-                org        = value.DepartmentName;
+                org        = value.OrganizationName;
 
-            $(".json-content").html("<li>" +
-              "<a target='_blank' href='"+ uri +"' data-position-id='" + positionid + "'>" + title + "</a> &mdash; '"+ location +"' " +
-              "<ul>" +
-                //"<li><p>"+ desc +"</p></li>" +
-              "<li><b>"+ org +"</b><a target='_blank' href='"+ uri +"?PostingChannelID=RESTAPI'><b>Apply</b></a></li></ul>" +
-              "</li>"
-            );
-            console.log(this);
+
+              $(".json-content").append("<li>" +
+                "<a target='_blank' href='"+ uri +"' data-position-id='" + positionid + "'>" + org + "</a> - <a target='_blank' href='"+ uri +"?PostingChannelID=RESTAPI'>Apply</a>" +
+                "<ul><li><b>"+ title +"</b></li>"+
+                "<li><div class='states'></div></li></ul>"
+              );
+
+            $.each(value.PositionLocation, function(location,name){
+              var locations = name.CityName;
+             // var combined  = locations.join(",");
+              $(".states").append(locations+"<br />");
+              //console.log("Located in: '"+combined+"'");
+            });
+
+            //console.log(this);
           });
+        }, error: function(){
+
+          $(".error").show();
+          $(".json-content").empty();
+        }, complete: function(){
+          var results = $("ul.json-content li").length;
+          if( results == 0 ){
+            $(".error").show();
+          } else {
+            $(".error").hide();
+          }
         }
       //});
     });
   };
-  Drupal.jobs_api.state_select = function () {
-    // Fire off ajax feed when ready
-    //$("[id^=US-]").click(function(){
-    //});
-  }
+
 })(jQuery,Drupal);
