@@ -7,5 +7,6 @@ jobs_api.api:
     js/regional_map_custom.js: {}
   dependencies:
     - core/drupal
+    - core/drupalSettings
     - core/jquery
     - core/jquery.once

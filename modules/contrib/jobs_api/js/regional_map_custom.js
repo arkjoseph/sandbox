@@ -10,6 +10,7 @@
 //});
 // SNAP
 var states = "";
+var regionVar = "";
 (function ($, Drupal) {
   var s = new Snap('#map-canvas');
 
@@ -39,7 +40,7 @@ var states = "";
                   id :  'r'+item.number
               }).hover(function() {
                   this.animate({
-                      fill: "#eeeadf",
+                    fill: "#eeeadf",
                     opacity: "1"
                   },300);
                   //animate the circle marker
@@ -102,7 +103,7 @@ var states = "";
                 if($('.r'+item.number+'-link').length > 0) {
 
                 } else {
-                  Drupal.jobs_api.feed(states);
+                  Drupal.jobs_api.feed(states,regionVar);
                 }
               });
 
@@ -150,12 +151,12 @@ var states = "";
         description.click(function() {
           if($('.r'+item.number+'-link').length > 0) {
               var link = $('.r'+item.number+'-link').text();
-              var sanitizedLink = link.replace(/ /g,'')
+              var sanitizedLink = link.replace(/\//g,'?');
               //window.location.href = sanitizedLink;
-              //console.log(sanitizedLink);
+              //console.log(link);
             } else {
               //window.location.href = 'http://gsa.gov'+item.link;
-              //console.log(item.link);
+              console.log(sanitizedLink);
             }
           });
               description.attr({
