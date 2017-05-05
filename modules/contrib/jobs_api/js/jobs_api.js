@@ -63,7 +63,6 @@
             //console.log(this);
           });
         }, error: function(){
-
           $(".error").show();
           $(".json-content").empty();
         }, complete: function(){
@@ -73,6 +72,10 @@
           } else {
             $(".error").hide();
           }
+          $('html, body').animate({
+            // Grab the offset (position relative to document)
+            scrollTop: $("ul.json-content").offset().top
+          }, 'slow');
         }
       //});
     });

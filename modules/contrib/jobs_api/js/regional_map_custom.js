@@ -31,7 +31,6 @@ var states = "";
                   regionVar.append(map.select("#US-"+abbr));
 
               });
-
               // give the group some attributes and hover effects
               regionVar.attr({
                   fill: item.colorOnMap,
@@ -40,7 +39,8 @@ var states = "";
                   id :  'r'+item.number
               }).hover(function() {
                   this.animate({
-                      fill: "#eeeadf"
+                      fill: "#eeeadf",
+                    opacity: "1"
                   },300);
                   //animate the circle marker
                   this.select('#marker-'+item.number).attr({
@@ -49,12 +49,12 @@ var states = "";
                   //other territories on hover
                   if(item.otherTerritory != null) {
                       terrs.animate({
-                          opacity: 1
+                          opacity: "1"
                       },300);
                   }
                   //states on hover
                   stateNames.animate({
-                      opacity: 1
+                      opacity: "1"
                   },300);
               },function() {
                   this.animate({
@@ -71,7 +71,7 @@ var states = "";
                           opacity: 0
                       },300);
                   }
-                  //states on hover
+                 // states on hover
                   stateNames.animate({
                       opacity: 0
                   },300);
@@ -79,22 +79,29 @@ var states = "";
 
               // REGION on click events
               regionVar.click(function() {
+
                 var allRegions = Snap.selectAll('#r1,#r2,#r3,#r4,#r5,#r6,#r7,#r8,#r9,#r10,#r11');
                 allRegions.forEach( function(elem,i) {
+
                     if( elem != '#r'+item.number) {
-                        elem.unhover().animate({opacity: 0.3}, 300);
+                        elem.unhover().animate({
+                          opacity: 0.3
+                        }, 300);
                     }
                 });
-                Snap.select('#r'+item.number).unhover().animate({opacity:1, fill: '#eeeadf'},300);
-                if($('.r'+item.number+'-link').length > 0) {
-                  var link = $('.r'+item.number+'-link').text();
-                  var sanitizedLink = link.replace(/ /g,'')
-                  //window.location.href = sanitizedLink;
-                  //console.log(states);
-                } else {
-                  //window.location.href = '?'+item.link;
 
-                  //console.log(states);
+                stateNames.animate({
+                  opacity: 1
+                },300);
+
+                Snap.select('#r'+item.number).unhover().animate({
+                  opacity:1,
+                  fill: item.colorOnMap
+                },300);
+
+                if($('.r'+item.number+'-link').length > 0) {
+
+                } else {
                   Drupal.jobs_api.feed(states);
                 }
               });
@@ -169,7 +176,7 @@ var states = "";
               stateNames.attr({
                   'pointer-events': "none",
                   opacity: 0,
-      'font-size' : '13px',
+                  'font-size' : '14px',
                   id: 'stateNames-'+item.number
               });
 
@@ -275,9 +282,9 @@ var states = "";
         if($('.r11-link').length > 0) {
             var link = $('.r11-link').text();
             var sanitizedLink = link.replace(/ /g,'')
-            window.location.href = sanitizedLink;
+            //window.location.href = sanitizedLink;
         } else {
-          window.location.href = '/r11';
+          //window.location.href = '/r11';
         }
       });
       description11.hover(function(){
