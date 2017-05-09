@@ -7,11 +7,16 @@
   'use strict';
 
   Drupal.jobs_api = {};
+  Drupal.behaviors.jobs_api = {
+    attach: function (context, settings) {
+
+    }
+  };
 
   //
   // Main jobs feed ajax get request
   //
-  Drupal.jobs_api.feed = function (states) {
+  Drupal.jobs_api.feed = function (states,regionNumber) {
     var $authKey      = "bLTvp99I05OBhwJAkVSpRv8QfCp9eN+FRqPi7DoIbT0=",
       $host           = "data.usajobs.gov",
       $userAgent      = "joseph.garrido@gsa.gov",
@@ -22,7 +27,7 @@
       $url_request    = "https://data.usajobs.gov/api/search?Organization='"+$q_organization+"'&LocationName='" + $q_location +"'",
       $clean_url      = $url_request.replace(/'/g,"");
 
-    console.log($clean_url);
+    console.log($state_array);
 
     //$(".json-content").once(function (){
       $.ajax({
@@ -36,7 +41,7 @@
         //cache: true,
         dataType: "json",
         success: function(data){
-          $(".json-content").empty();
+          $(".json-content,.region_area").empty();
           $(".error").hide();
           $.each(data.SearchResult.SearchResultItems, function(key,value){
             var value    = this.MatchedObjectDescriptor,
@@ -45,27 +50,22 @@
                 uri        = value.PositionURI,
                 desc       = value.UserArea.Details.JobSummary,
                 org        = value.OrganizationName;
-
+            var $states    = states.join(", ");
 
               $(".json-content").append("<li>" +
-                "<a target='_blank' href='"+ uri +"' data-position-id='" + positionid + "'>" + org + "</a> - <a target='_blank' href='"+ uri +"?PostingChannelID=RESTAPI'>Apply</a>" +
-                "<ul><li><b>"+ title +"</b></li>"+
-                "<li><div class='states'></div></li></ul>"
-              );
+                "<b>Department: </b><a target='_blank' href='"+ uri +"' data-position-id='" + positionid + "'>" + org + "</a> - <a target='_blank' href='"+ uri +"?PostingChannelID=RESTAPI'>Apply</a>" +
+                "<ul><li><b>Position Title:</b> "+ title +"</li>"+
+                "<li><b>Openings within: </b><span class='states'>'" + $states + "'</span></li></ul>"
+              ).fadeIn();
 
-            $.each(value.PositionLocation, function(location,name){
-              var locations = name.CityName;
-             // var combined  = locations.join(",");
-              $(".states").append(locations+"<br />");
-              //console.log("Located in: '"+combined+"'");
-            });
 
-            //console.log(this);
+            console.log(this);
           });
         }, error: function(){
           $(".error").show();
           $(".json-content").empty();
         }, complete: function(){
+          $(".region_area").html('Region '+regionNumber).fadeIn();
           var results = $("ul.json-content li").length;
           if( results == 0 ){
             $(".error").show();

@@ -8,7 +8,76 @@
 
 <div class="usa-jobs-feed">
     <h2>{{title}}</h2>
+
+    <form class="form-inline" id="state-selection-form">
+        <div class="form-group" style=" width: 100%;">
+            <label for="state-selection" class="sr-only">Select a State</label>
+            <select name="state-selection" class="form-control" id="state-selection" style=" width: 80%;">
+                <option value="null">Select a state, territory, or global region</option>
+                <option value="r4">Alabama</option>
+                <option value="r10">Alaska</option>
+                <option value="r9">American Samoa</option>
+                <option value="r9">Arizona</option>
+                <option value="r7">Arkansas</option>
+                <option value="r9">California</option>
+                <option value="r8">Colorado</option>
+                <option value="r1">Connecticut</option>
+                <option value="r3">Delaware</option>
+                <option value="r11">District of Columbia</option>
+                <option value="r9">East Asia</option>
+                <option value="r3">Europe</option>
+                <option value="r4">Florida</option>
+                <option value="r4">Georgia</option>
+                <option value="r9">Guam</option>
+                <option value="r9">Hawaii</option>
+                <option value="r10">Idaho</option>
+                <option value="r5">Illinois</option>
+                <option value="r5">Indiana</option>
+                <option value="r6">Iowa</option>
+                <option value="r6">Kansas</option>
+                <option value="r4">Kentucky</option>
+                <option value="r7">Louisiana</option>
+                <option value="r1">Maine</option>
+                <option value="r1">Massachusetts</option>
+                <option value="r3">Maryland</option>
+                <option value="r5">Michigan</option>
+                <option value="r5">Minnesota</option>
+                <option value="r4">Mississippi</option>
+                <option value="r6">Missouri</option>
+                <option value="r8">Montana</option>
+                <option value="r6">Nebraska</option>
+                <option value="r9">Nevada</option>
+                <option value="r1">New Hampshire</option>
+                <option value="r2">New Jersey</option>
+                <option value="r7">New Mexico</option>
+                <option value="r2">New York</option>
+                <option value="r4">North Carolina</option>
+                <option value="r8">North Dakota</option>
+                <option value="r5">Ohio</option>
+                <option value="r7">Oklahoma</option>
+                <option value="r10">Oregon</option>
+                <option value="r3">Pennsylvania</option>
+                <option value="r2">Puerto Rico</option>
+                <option value="r1">Rhode Island</option>
+                <option value="r4">South Carolina</option>
+                <option value="r8">South Dakota</option>
+                <option value="r4">Tennessee</option>
+                <option value="r7">Texas</option>
+                <option value="r2">US Virgin Islands</option>
+                <option value="r8">Utah</option>
+                <option value="r3">Virginia</option>
+                <option value="r1">Vermont</option>
+                <option value="r10">Washington</option>
+                <option value="r3">West Virginia</option>
+                <option value="r5">Wisconsin</option>
+                <option value="r8">Wyoming</option>
+            </select>
+            <a href="javascript:void(0)" class="btn gsa-primary-btn hidden" id="submit-state" title="Go">Go</a></div>
+    </form>
+
     <svg id="map-canvas" preserveAspectRatio="xMidYMin slice" style="width: 100%; overflow: visible; box-sizing: content-box; enable-background:new 0 0 381.1 381.1;" width="100%" height="100%" viewBox="0 0 1300 900"></svg>
-    <ul class="json-content"></ul>
+
+    <h3 class="region_area" style="display:none"></h3>
+    <ul class="json-content" style="display:none"></ul>
     <div style="display:none" class="error">There is no data available!</div>
 </div>
