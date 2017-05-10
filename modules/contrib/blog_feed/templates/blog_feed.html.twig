@@ -1,14 +1,20 @@
-{#
-
 /**
- * @file
- * Template file for jobs feed module.
- */
-#}
+* @file
+* Contains js the blog feed xml/rss feed.
+*/
 
-<div class="usa-jobs-feed">
+(function ($, Drupal) {
+'use strict';
+
+Drupal.jobs_api = {};
+Drupal.behaviors.jobs_api = {
+attach: function (context, settings) {
+
+}
+};
+<div class="blog-feed">
     <h2>{{title}}</h2>
 
 
-    <ul class="json-content"></ul>
+    <ul class="feed-content"></ul>
 </div>

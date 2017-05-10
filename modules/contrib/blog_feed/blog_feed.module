@@ -1,15 +1,15 @@
 <?php
 /**
  *
- * @ingroup jobs_api
+ * @ingroup blog_feed
  * @{
  * Implements hook_theme().
  *
  */
-function jobs_api_theme() {
+function blog_feed_theme() {
   return array(
-    'jobs_api' => array(
-      'template' => 'jobsapi',
+    'blog_feed' => array(
+      'template' => 'blog_feed',
       'variables' => array('title' => NULL),
     ),
   );

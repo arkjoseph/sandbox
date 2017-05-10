@@ -1,5 +1,5 @@
-name: Jobs API
-description: JOBS API Feed for Drupal.
+name: Blog Feed
+description: Blog Feed for Drupal.
 type: module
 package: 'API'
 

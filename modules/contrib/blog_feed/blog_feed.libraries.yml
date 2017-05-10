@@ -1,8 +1,8 @@
 # A simple script using jquery ui accordion.
-jobs_api.api:
+blog_feed.api:
   js:
-    js/jobs_api.js: {}
-  # Build up our dependencies for this page as a library. Our accordion script
-  # needs jquery.ui.accordion. You can find the core scripts under core/assets/.
+    js/blog_feed.js: {}
   dependencies:
+    - core/drupal
     - core/jquery
+    - core/jquery.once

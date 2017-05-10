@@ -1,5 +1,5 @@
 # Define default links for this module.
-jobs_api.api:
-  title: USA Jobs Feed
-  description: USA Jobs Feed.
-  route_name: jobs_api.api
+blog_feed.api:
+  title: GSA Blog Feed
+  description: GSA Blog Feed.
+  route_name: blog_feed.api

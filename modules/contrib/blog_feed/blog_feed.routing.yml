@@ -1,7 +1,7 @@
-jobs_api.api:
-  path: '/jobs-api'
+blog_feed.api:
+  path: '/blog-feed'
   defaults:
-    _title: 'USA JOBS Feed'
-    _controller: '\Drupal\jobs_api\Controller\JobsApiController::getJobsApiImplementation'
+    _title: 'GSA Blog Feed'
+    _controller: '\Drupal\blog_feed\Controller\BlogFeedController::getBlogFeedImplementation'
   requirements:
     _permission: 'access content'
