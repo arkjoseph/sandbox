@@ -40,9 +40,11 @@
         //async: true,
         //cache: true,
         dataType: "json",
+        beforeSend: function () {
+          $(".loading").removeClass("hidden");
+        },
         success: function(data){
           $(".json-content,.region_area").empty();
-          $(".error").hide();
           $.each(data.SearchResult.SearchResultItems, function(key,value){
             var value    = this.MatchedObjectDescriptor,
                 title      = value.PositionTitle,
@@ -52,30 +54,30 @@
                 org        = value.OrganizationName;
             var $states    = states.join(", ");
 
-              $(".json-content").append("<li>" +
+              $(".json-content").append("<ul><li>" +
                 "<b>Department: </b><a target='_blank' href='"+ uri +"' data-position-id='" + positionid + "'>" + org + "</a> - <a target='_blank' href='"+ uri +"?PostingChannelID=RESTAPI'>Apply</a>" +
                 "<ul><li><b>Position Title:</b> "+ title +"</li>"+
-                "<li><b>Openings within: </b><span class='states'>'" + $states + "'</span></li></ul>"
+                "<li><b>Openings within: </b><span class='states'>'" + $states + "'</span></li></ul></ul>"
               ).fadeIn();
 
 
             console.log(this);
           });
         }, error: function(){
-          $(".error").show();
           $(".json-content").empty();
         }, complete: function(){
           $(".region_area").html('Region '+regionNumber).fadeIn();
-          var results = $("ul.json-content li").length;
-          if( results == 0 ){
-            $(".error").show();
-          } else {
-            $(".error").hide();
-          }
+          $(".loading").addClass("hidden");
           $('html, body').animate({
             // Grab the offset (position relative to document)
-            scrollTop: $("ul.json-content").offset().top
+            scrollTop: $(".region_area").offset().top - 150
           }, 'slow');
+          var results = $(".json-content ul li").length;
+          if( results == 0 ){
+            $(".error").removeClass("hidden");
+          } else {
+            $(".error").addClass("hidden");
+          }
         }
       //});
     });
