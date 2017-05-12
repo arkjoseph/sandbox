@@ -1,20 +1,13 @@
+{#
+
 /**
-* @file
-* Contains js the blog feed xml/rss feed.
-*/
-
-(function ($, Drupal) {
-'use strict';
-
-Drupal.jobs_api = {};
-Drupal.behaviors.jobs_api = {
-attach: function (context, settings) {
-
-}
-};
-<div class="blog-feed">
-    <h2>{{title}}</h2>
-
-
-    <ul class="feed-content"></ul>
+ * @file
+ * Template file for blog feed module.
+ */
+#}
+<div class="infinite-carousel" id="innovationFeed">
+    <div class="viewport">
+        <div class="loading hidden" style="background: url(http://gsa.gov/resources/images/loading.gif) center center no-repeat;}">&nbsp;</div>
+        <ul class="list-unstyled list"></ul>
+    </div>
 </div>

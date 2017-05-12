@@ -29,16 +29,21 @@
         xml:"application/rss+xml"
       },
       dataType:"xml",
+      beforeSend: function () {
+        $(".loading").removeClass("hidden");
+      },
       success:function(data) {
-        $(data).find("item").each(function () { // or "item" or whatever suits your feed
-          var el = $(this);
-          console.log("------------------------");
-          console.log("title      : " + el.find("title").text());
-          console.log("link       : " + el.find("link").text());
-          console.log("description: " + el.find("description").text());
+        $(data).find("item").each(function () {
+          var value       = $(this),
+              title       = value.find("title").text(),
+              link        = value.find("link").text(),
+              description = value.find("description").text();
+
+         $("#innovationFeed ul").append("<li><p>'"+title+"'<br><a target='_blank' href='"+link+"'>Learn More</a></p></li>").fadeIn();
+
         });
-
-
+      },complete: function(){
+        $(".loading").addClass("hidden");
       }
     });
   };
