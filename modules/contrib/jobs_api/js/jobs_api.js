@@ -55,18 +55,17 @@
             var $states    = states.join(", ");
 
               $(".json-content").append("<ul><li>" +
-                "<b>Department: </b><a target='_blank' href='"+ uri +"' data-position-id='" + positionid + "'>" + org + "</a> - <a target='_blank' href='"+ uri +"?PostingChannelID=RESTAPI'>Apply</a>" +
+                "<a target='_blank' href='"+ uri +"' data-position-id='" + positionid + "'>" + org + "</a>" +
                 "<ul><li><b>Position Title:</b> "+ title +"</li>"+
                 "<li><b>Openings within: </b><span class='states'>'" + $states + "'</span></li></ul></ul>"
               ).fadeIn();
-
 
             console.log(this);
           });
         }, error: function(){
           $(".json-content").empty();
         }, complete: function(){
-          $(".region_area").html('Region '+regionNumber).fadeIn();
+          $(".region_area").html('Region '+regionNumber+' Jobs').fadeIn();
           $(".loading").addClass("hidden");
           $('html, body').animate({
             // Grab the offset (position relative to document)

@@ -96,10 +96,6 @@ var regionNumber = "";
               fill: "#eeeadf",
               opacity: "1"
             }, 300);
-            //animate the circle marker
-            this.select('#marker-' + item.number).attr({
-              fill: '#ed5155'
-            });
             //other territories on hover
             if (item.otherTerritory != null) {
               terrs.animate({
@@ -154,7 +150,7 @@ var regionNumber = "";
             }, 300);
 
             if ($('.r' + item.number + '-link').length > 0) {
-
+              return false;
             } else {
               Drupal.jobs_api.feed(states,regionNumber);
             }
@@ -173,7 +169,9 @@ var regionNumber = "";
           }).animate({
             r: 13
           }, (i + 1) * 200);
+
           var number = s.text(item.markerX, markerNumberY, item.number);
+
           number.attr({
             fill: '#fff',
             'font-size': '23px',
@@ -200,13 +198,34 @@ var regionNumber = "";
               stroke: '#333',
               strokeWidth: 3
             });
+          } else if (item.number == '11') {
+            description = s.multitext(descriptionX + 25, markerDescriptionY + 32, 'National Capital Region');
+            var line11 = s.line(1000, 410, 1030, 427);
+            description.attr({
+
+            });
+            line11.attr({
+              stroke: '#333',
+              strokeWidth: 3
+            });
+            var hoverText = s.text(1035, 450, 'Washington DC Metro Area');
+            //var region11group = s.group(line11,hoverText);
+            //region11group.hover(function(){
+            //  this.attr({
+            //    opacity: "0"
+            //  },function(){
+            //    this.attr({
+            //      opacity: "1"
+            //    });
+            //  });
+            //});
           } else {
             description = s.multitext(descriptionX, markerDescriptionY, item.name);
           }
           description.click(function () {
             if ($('.r' + item.number + '-link').length > 0) {
               var link = $('.r' + item.number + '-link').text();
-              var sanitizedLink = link.replace(/ /g, '')
+              var sanitizedLink = link.replace(/ /g, '');
               //window.location.href = sanitizedLink;
               //console.log(sanitizedLink);
             } else {
@@ -269,99 +288,105 @@ var regionNumber = "";
               });
             }
           }
-          ;
+
 
 
         });
         // REGION 11 ONLY
-        var hoverDescription = s.text(1035, 456, 'Washington DC Metro Area');
-        hoverDescription.attr({
-          'pointer-events': "none",
-          opacity: 0,
-          'font-size': '13px',
-          fill: '#333'
+        //var hoverDescription = s.text(1035, 456);
+        //hoverDescription.attr({
+        //  //'pointer-events': "none",
+        //  opacity: 0,
+        //  'font-size': '13px',
+        //  fill: '#333'
+        //});
+        //var circle11 = s.path("M 985.000 400.000 L 994.405 404.944 L 992.608 394.472 L 1000.217 387.056 L 989.702 385.528 L 985.000 376.000 L 980.298 385.528 L 969.783 387.056 L 977.392 394.472 L 975.595 404.944 L 985.000 400.000");
+        //circle11.attr({
+        //  fill: '#274b65',
+        //  filter: shadow,
+        //  stroke: 'none',
+        //  id: 'region11'
+        //});
+        //circle11.hover(function () {
+        //  this.attr({
+        //    fill: '#ed5155'
+        //  });
+        //  hoverDescription.attr({
+        //    opacity: 1
+        //  })
+        //}, function () {
+        //  this.attr({
+        //    fill: '#274b65'
+        //  });
+        //  hoverDescription.attr({
+        //    opacity: 0
+        //  })
+        //});
+        //var number11 = s.text(985, 400, '11')
+        //number11.attr({
+        //  fill: '#fff',
+        //  'font-size': '18px',
+        //  'text-anchor': 'middle',
+        //  'font-weight': 'bold',
+        //  //'pointer-events': "none",
+        //  opacity: 0,
+        //  stroke: 'none'
+        //}).animate({
+        //  opacity: 1
+        //}, 600);
+
+        //var description11;
+        //if (item.number == '11') {
+        //  description11 = s.multitext(descriptionX + 40, markerDescriptionY + 43, item.name);
+        //}
+
+        //description11.attr({
+        //  fill: '#333',
+        //  'font-size': '16px',
+        //  'font-weight': '600',
+        //  opacity: 0,
+        //  stroke: 'none'
+        //}).animate({
+        //  opacity: 1
+        //}, 2000);
+        //var line11 = s.line(998, 400, 1030, 427);
+        //line11.attr({
+        //  stroke: '#333',
+        //  strokeWidth: 3
+        //});
+        //var region11Var = s.group(line11, description11, circle11, number11, hoverDescription);
+        //region11Var.attr({
+        //  class: 'region',
+        //  id: 'r11'
+        //});
+        //region11Var.click(function () {
+        //  if ($('.r11-link').length > 0) {
+        //    var link = $('.r11-link').text();
+        //
+        //  } else {
+        //    var states = "DC;";
+        //    Drupal.jobs_api.feed(states,regionNumber);
+        //
+        //  }
+        //});
+      //  description11.hover(function () {
+        //    var thisRegion = Snap.select('#region11');
+        //    thisRegion.attr({
+        //      fill: '#000000'
+        //    });
+        //    hoverDescription.attr({
+        //      opacity: 1
+        //    })
+        //  }, function () {
+        //    var theRegion = Snap.select('#region11');
+        //    theRegion.attr({
+        //      fill: '#274b65'
+        //    });
+        //    hoverDescription.attr({
+        //      opacity: 0
+        //    })
+        //  });
         });
-        var circle11 = s.path("M 985.000 400.000 L 994.405 404.944 L 992.608 394.472 L 1000.217 387.056 L 989.702 385.528 L 985.000 376.000 L 980.298 385.528 L 969.783 387.056 L 977.392 394.472 L 975.595 404.944 L 985.000 400.000");
-        circle11.attr({
-          fill: '#274b65',
-          filter: shadow,
-          stroke: 'none',
-          id: 'region11'
-        });
-        circle11.hover(function () {
-          this.attr({
-            fill: '#ed5155'
-          });
-          hoverDescription.attr({
-            opacity: 1
-          })
-        }, function () {
-          this.attr({
-            fill: '#274b65'
-          });
-          hoverDescription.attr({
-            opacity: 0
-          })
-        });
-        var number11 = s.text(985, 400, '11')
-        number11.attr({
-          fill: '#fff',
-          'font-size': '18px',
-          'text-anchor': 'middle',
-          'font-weight': 'bold',
-          'pointer-events': "none",
-          opacity: 0,
-          stroke: 'none'
-        }).animate({
-          opacity: 1
-        }, 600);
-        var description11 = s.multitext(1035, 440, 'National Capital Region');
-        description11.attr({
-          fill: '#333',
-          'font-size': '16px',
-          'font-weight': '600',
-          opacity: 0,
-          stroke: 'none'
-        }).animate({
-          opacity: 1
-        }, 2000);
-        var line11 = s.line(998, 400, 1030, 427);
-        line11.attr({
-          stroke: '#333',
-          strokeWidth: 3
-        })
-        var region11Var = s.group(line11, description11, circle11, number11, hoverDescription);
-        region11Var.attr({
-          class: 'region',
-          id: 'r11'
-        });
-        region11Var.click(function () {
-          if ($('.r11-link').length > 0) {
-            var link = $('.r11-link').text();
-            var sanitizedLink = link.replace(/ /g, '')
-            //window.location.href = sanitizedLink;
-          } else {
-            //window.location.href = '/r11';
-          }
-        });
-        description11.hover(function () {
-          var thisRegion = Snap.select('#region11');
-          thisRegion.attr({
-            fill: '#ed5155'
-          });
-          hoverDescription.attr({
-            opacity: 1
-          })
-        }, function () {
-          var theRegion = Snap.select('#region11');
-          theRegion.attr({
-            fill: '#274b65'
-          });
-          hoverDescription.attr({
-            opacity: 0
-          })
-        });
-      });
 
 
 

@@ -170,7 +170,20 @@
 			"AK",
 			"ID"
 	  ]
-    }
+    },
+   {
+     "number" : 11,
+     "name" : "National\nCapital\nRegion",
+     "link" : "/r11",
+     "otherTerritory" : null,
+     "colorOnMap" : "#28a1d8",
+     "markerX" : 985,
+     "markerY" : 400,
+     "stateNames" : "",
+     "states" : [
+       "DC"
+     ]
+   }
 
  ]   
 }
