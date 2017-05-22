@@ -22,6 +22,12 @@
   //
 
   Drupal.blog_feed.feed = function () {
+    //Client ID (Consumer Key)
+    //dj0yJmk9V09zbXUwcUJMVXE2JmQ9WVdrOVdVb3pNa1JWTkdrbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD0xYw--
+    //Client Secret (Consumer Secret)
+    //e01cfd114da7059b7abf207e664eb96146d65e29
+
+
     var feed = "https://query.yahooapis.com/v1/public/yql?q=SELECT%20*%20FROM%20xml%20WHERE%20url%3D%22https%3A%2F%2Fgsablogs.gsa.gov%2Finnovation%2Ffeed%3Fformat%3Dxml%22&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
 
     $.ajax(feed, {
