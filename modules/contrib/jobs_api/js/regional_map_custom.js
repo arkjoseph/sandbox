@@ -2,33 +2,67 @@
 
 
 // SNAP
-var states = "";
-var regionNumber = "";
+
 (function ($, Drupal) {
   Drupal.behaviors.jobs_api = {
     attach: function (context, settings) {
       Drupal.jobs_api.svg_config();
       Drupal.jobs_api.activate_click();
+      Drupal.jobs_api.direct_link();
+
+      var states = "";
+      var regionNumber = "";
+      var urlRegion = "";
     }
   };
+
+  Drupal.jobs_api.direct_link = function(urlRegion) {
+
+    var getUrlParameter = function getUrlParameter(sParam) {
+      var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+      for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+          return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+      }
+    };
+
+    setTimeout(function() {
+      var urlRegion = getUrlParameter('region');
+      console.log(urlRegion);
+
+      // not working
+      var activeRegion = Snap.select('#' + urlRegion);
+      activeRegion.unhover().animate({
+        opacity: 1
+      }, 300);
+      var push = $('g#' + urlRegion);
+      for (var i = 0; i < 1; i++) {
+        activeRegion.click();
+      }
+    },2000);
+  };
+
   Drupal.jobs_api.activate_click = function () {
 
     $('#submit-state').on('click',function (e) {
       e.preventDefault();
       var regionSelected = $('#state-selection').val(),
-        selected = Snap.select('g#' + regionSelected);
+          selected = Snap.select('g#' + regionSelected);
 
-      console.log(selected.node); //Returns the DOM NODE
-
-      selected.node.simulate("click");
-      //console.log(regionArea);
     });
 
     // ON SELECT
     var $button = $('#submit-state');
     $button.attr('disabled', 'disabled');
 
-    $('#state-selection').on('change', function (e) {
+    $('#state-selection').on('change', function () {
       selectValue = $(this).val();
       if (selectValue == 'null') {
         $button.attr('disabled', 'disabled');
@@ -36,26 +70,25 @@ var regionNumber = "";
         $button.removeAttr('disabled');
       }
 
-      var allRegions = Snap.selectAll('#r1,#r2,#r3,#r4,#r5,#r6,#r7,#r8,#r9,#r10,#r11');
-      allRegions.forEach(function (elem, i) {
-        if (elem != '#' + selectValue) {
-          elem.unhover().animate({opacity: 0.3}, 300);
-
-        } else {
-          console.log("false");
-        }
-      });
+      //var allRegions = Snap.selectAll('#r1,#r2,#r3,#r4,#r5,#r6,#r7,#r8,#r9,#r10,#r11');
+      //allRegions.forEach(function (elem, i) {
+      //  if (elem != '#' + selectValue) {
+      //    elem.unhover().animate({opacity: 0.3}, 300);
+      //
+      //  } else {
+      //    console.log("false");
+      //  }
+      //});
 
       var activeRegion = Snap.select('#' + selectValue);
       activeRegion.unhover().animate({
         opacity: 1
       }, 300);
-      //var activate = activeRegion.node;  //
+
       var push = $('g#' + selectValue);
       for(var i=0; i<1; i++) {
         activeRegion.click();
       }
-
     });
   };
 

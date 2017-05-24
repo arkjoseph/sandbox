@@ -37,33 +37,37 @@
           "Authorization-Key": $authKey,
           "Content-Type": "application/json"
         },
-        //async: true,
-        //cache: true,
         dataType: "json",
         beforeSend: function () {
           $(".loading").removeClass("hidden");
         },
         success: function(data){
-          $(".json-content,.region_area").empty();
+          $(".ajax-content,.region_area").empty();
+          var locationsOffered = "";
           $.each(data.SearchResult.SearchResultItems, function(key,value){
             var value    = this.MatchedObjectDescriptor,
                 title      = value.PositionTitle,
                 positionid = value.PositionID,
                 uri        = value.PositionURI,
                 desc       = value.UserArea.Details.JobSummary,
-                org        = value.OrganizationName;
-            var $states    = states.join(", ");
+                org        = value.OrganizationName,
+                statesObj  = [];
 
-              $(".json-content").append("<ul><li>" +
-                "<a target='_blank' href='"+ uri +"' data-position-id='" + positionid + "'>" + org + "</a>" +
-                "<ul><li><b>Position Title:</b> "+ title +"</li>"+
-                "<li><b>Openings within: </b><span class='states'>'" + $states + "'</span></li></ul></ul>"
-              ).fadeIn();
+            $.each(value.PositionLocation, function(key,value){
+              var locationsOffered = this.CountrySubDivisionCode;
+              if(!statesObj.includes(locationsOffered)) {
+                statesObj.push(locationsOffered);
+              }
+            });
 
-            console.log(this);
+            $(".ajax-content").append("<ul><li>" +
+              "<a target='_blank' href='"+ uri +"' data-position-id='" + positionid + "'>" + org + "</a>" +
+              "<ul><li><b>Position Title:</b> "+ title +"</li><li><p><b>Job Locations: </b>"+ statesObj.join(", ") +"</p></li></ul>"
+            ).fadeIn();
+
           });
         }, error: function(){
-          $(".json-content").empty();
+          $(".ajax-content").empty();
         }, complete: function(){
           $(".region_area").html('Region '+regionNumber+' Jobs').fadeIn();
           $(".loading").addClass("hidden");
@@ -71,7 +75,7 @@
             // Grab the offset (position relative to document)
             scrollTop: $(".region_area").offset().top - 150
           }, 'slow');
-          var results = $(".json-content ul li").length;
+          var results = $(".ajax-content ul li").length;
           if( results == 0 ){
             $(".error").removeClass("hidden");
           } else {
