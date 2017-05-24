@@ -2,6 +2,7 @@
 blog_feed.api:
   js:
     js/blog_feed.js: {}
+    js/infiniteCarousel.js: {}
   dependencies:
     - core/drupal
     - core/jquery
