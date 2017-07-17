@@ -43,9 +43,9 @@
       "markerY" : 505,
       "stateNames" : "Alabama\nFlorida\nGeorgia\nKentucky\nMississippi\nNorth Carolina\nSouth Carolina\nTennessee",
 	  "states" : [
+      "NC",
 			"TN",
 			"SC",
-			"NC",
 			"MS",
 			"KY",
 			"GA",
@@ -165,17 +165,17 @@
       "markerY" : 200,
       "stateNames" : "Alaska\nIdaho\nOregon\nWashington",
 	  "states" : [
+      "ID",
 			"WA",
 			"OR",
-			"AK",
-			"ID"
+			"AK"
 	  ]
     },
    {
      "number" : 11,
-     "name" : "National\nCapital\nRegion",
+     "name" : "Central\nOffice\n&\nNational\nCapital\nRegion",
      "link" : "/r11",
-     "otherTerritory" : null,
+     "otherTerritory" : "Washington DC Metro Area",
      "colorOnMap" : "#28a1d8",
      "markerX" : 985,
      "markerY" : 400,

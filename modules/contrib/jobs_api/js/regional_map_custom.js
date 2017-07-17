@@ -1,8 +1,3 @@
-
-
-
-// SNAP
-
 (function ($, Drupal) {
   Drupal.behaviors.jobs_api = {
     attach: function (context, settings) {
@@ -11,42 +6,10 @@
       Drupal.jobs_api.direct_link();
 
       var states = "";
+      var regionStates = "";
       var regionNumber = "";
       var urlRegion = "";
     }
-  };
-
-  Drupal.jobs_api.direct_link = function(urlRegion) {
-
-    var getUrlParameter = function getUrlParameter(sParam) {
-      var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
-
-      for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
-
-        if (sParameterName[0] === sParam) {
-          return sParameterName[1] === undefined ? true : sParameterName[1];
-        }
-      }
-    };
-
-    setTimeout(function() {
-      var urlRegion = getUrlParameter('region');
-      console.log(urlRegion);
-
-      // not working
-      var activeRegion = Snap.select('#' + urlRegion);
-      activeRegion.unhover().animate({
-        opacity: 1
-      }, 300);
-      var push = $('g#' + urlRegion);
-      for (var i = 0; i < 1; i++) {
-        activeRegion.click();
-      }
-    },2000);
   };
 
   Drupal.jobs_api.activate_click = function () {
@@ -55,7 +18,6 @@
       e.preventDefault();
       var regionSelected = $('#state-selection').val(),
           selected = Snap.select('g#' + regionSelected);
-
     });
 
     // ON SELECT
@@ -70,16 +32,6 @@
         $button.removeAttr('disabled');
       }
 
-      //var allRegions = Snap.selectAll('#r1,#r2,#r3,#r4,#r5,#r6,#r7,#r8,#r9,#r10,#r11');
-      //allRegions.forEach(function (elem, i) {
-      //  if (elem != '#' + selectValue) {
-      //    elem.unhover().animate({opacity: 0.3}, 300);
-      //
-      //  } else {
-      //    console.log("false");
-      //  }
-      //});
-
       var activeRegion = Snap.select('#' + selectValue);
       activeRegion.unhover().animate({
         opacity: 1
@@ -88,6 +40,9 @@
       var push = $('g#' + selectValue);
       for(var i=0; i<1; i++) {
         activeRegion.click();
+        Snap.select('#terrioties-'+selectValue).attr({
+          opacity: 1
+        });
       }
     });
   };
@@ -171,6 +126,12 @@
                   opacity: 0.3
                 }, 300);
               }
+              if (item.otherTerritory != null && elem != '#terrioties-' + item.number) {
+                terrs.animate({
+                  opacity: 1
+                }, 300);
+              }
+
             });
 
             stateNames.animate({
@@ -185,11 +146,20 @@
             if ($('.r' + item.number + '-link').length > 0) {
               return false;
             } else {
-              Drupal.jobs_api.feed(states,regionNumber);
+              //var regionStates = item.stateNames;
+              //Drupal.jobs_api.feed(states,regionNumber,regionStates);
+              if (item.otherTerritory != null && item.stateNames.length < 1) {
+                var regionStates = item.otherTerritory;
+                Drupal.jobs_api.feed(states,regionNumber,regionStates);
+              } else if (item.otherTerritory === null && item.stateNames.length > 1) {
+                regionStates = item.stateNames;
+                Drupal.jobs_api.feed(states,regionNumber,regionStates);
+              } else {
+                regionStates = item.stateNames + ", " + item.otherTerritory;
+                Drupal.jobs_api.feed(states,regionNumber,regionStates);
+              }
             }
           });
-
-
 
           // Draw Markers
           var circle = s.circle(item.markerX, item.markerY, 5);
@@ -232,13 +202,13 @@
               strokeWidth: 3
             });
           } else if (item.number == '11') {
-            description = s.multitext(descriptionX + 25, markerDescriptionY + 32, 'National Capital Region');
+            description = s.multitext(descriptionX + 25, markerDescriptionY + 32, 'Central Office &\nNational Capital Region');
             var line11 = s.line(1000, 410, 1030, 427);
             line11.attr({
               stroke: '#333',
               strokeWidth: 3
             });
-            var hoverText = s.text(1035, 450, 'Washington DC Metro Area');
+            var hoverText = s.text(1035, 450);
 
           } else {
             description = s.multitext(descriptionX, markerDescriptionY, item.name);
@@ -279,33 +249,78 @@
               terrs = s.multitext(stateNamesBox.x2 + 15, stateNamesBox.y + 13, item.otherTerritory);
               terrs.attr({
                 'pointer-events': "none",
-                'font-size': '13px',
+                'font-size': '14px',
                 opacity: 0,
-                fill: '#333',
-                id: 'terrioties-' + item.number
+                //fill: '#333',
+                id: 'terrioties-r' + item.number
               });
             } else if (item.number == 1) {
               terrs = s.multitext(stateNamesBox.x2 + 15, stateNamesBox.y + 13, item.otherTerritory);
               terrs.attr({
                 'pointer-events': "none",
-                'font-size': '13px',
+                'font-size': '14px',
                 opacity: 0,
-                fill: '#333',
-                id: 'terrioties-' + item.number
+                //fill: '#333',
+                id: 'terrioties-r' + item.number
               });
             } else {
               terrs = s.multitext(stateNamesBox.x, stateNamesBox.y2 + 15, item.otherTerritory);
               terrs.attr({
                 'pointer-events': "none",
-                'font-size': '13px',
+                'font-size': '14px',
                 opacity: 0,
-                fill: '#333',
-                id: 'terrioties-' + item.number
+                //fill: '#333',
+                id: 'terrioties-r' + item.number
               });
             }
           }
         });
       });
     });
-  }
+  };
+
+  Drupal.jobs_api.direct_link = function(urlRegion) {
+
+    var getUrlParameter = function getUrlParameter(sParam) {
+      var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+          sURLVariables = sPageURL.split('&'),
+          sParameterName,
+          i;
+
+      for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+          return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+      }
+    };
+
+    var urlRegion = getUrlParameter('region');
+
+    if (window.location.search.indexOf('region=') > -1){
+      window.setTimeout(function(){
+        Drupal.jobs_api.region_url(urlRegion)
+      }, 1500);
+    } else {
+      return false;
+    }
+  };
+
+  Drupal.jobs_api.region_url = function(urlRegion){
+
+    var activeRegion = Snap.select('#' + urlRegion);
+    activeRegion.unhover().animate({
+      opacity: 1
+    }, 300);
+
+    var push = $('g#' + urlRegion);
+    for (var i = 0; i < 1; i++) {
+      activeRegion.click();
+      Snap.select('#terrioties-'+urlRegion).attr({
+        opacity: 1
+      });
+    }
+
+  };
 })(jQuery,Drupal);

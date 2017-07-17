@@ -16,7 +16,7 @@
   //
   // Main jobs feed ajax get request
   //
-  Drupal.jobs_api.feed = function (states,regionNumber) {
+  Drupal.jobs_api.feed = function (states,regionNumber,regionStates,otherRegions) {
     var $authKey      = "bLTvp99I05OBhwJAkVSpRv8QfCp9eN+FRqPi7DoIbT0=",
       $host           = "data.usajobs.gov",
       $userAgent      = "joseph.garrido@gsa.gov",
@@ -24,16 +24,16 @@
       $q_location     = $state_array,
       $q_keyword      = "GSA",
       $q_organization = "GS",
-      $url_request    = "https://data.usajobs.gov/api/search?Organization='"+$q_organization+"'&LocationName='" + $q_location +"'",
+      $url_request    = "https://data.usajobs.gov/api/search?Organization='"+$q_organization+"'&LocationName='" + $q_location +"'&WhoMayApply=all&ResultsPerPage=200",
       $clean_url      = $url_request.replace(/'/g,"");
-
-    console.log($state_array);
 
     //$(".json-content").once(function (){
       $.ajax({
         url: $clean_url,
         type: "GET",
         headers: {
+          //"Host": $host,
+          //"User-Agent": $userAgent,
           "Authorization-Key": $authKey,
           "Content-Type": "application/json"
         },
@@ -43,7 +43,7 @@
         },
         success: function(data){
           $(".ajax-content,.region_area").empty();
-          var locationsOffered = "";
+
           $.each(data.SearchResult.SearchResultItems, function(key,value){
             var value    = this.MatchedObjectDescriptor,
                 title      = value.PositionTitle,
@@ -51,25 +51,28 @@
                 uri        = value.PositionURI,
                 desc       = value.UserArea.Details.JobSummary,
                 org        = value.OrganizationName,
-                statesObj  = [];
+                statesObj  = [""];
 
             $.each(value.PositionLocation, function(key,value){
-              var locationsOffered = this.CountrySubDivisionCode;
-              if(!statesObj.includes(locationsOffered)) {
-                statesObj.push(locationsOffered);
+              var allStates = this.CountrySubDivisionCode;
+              if(statesObj.indexOf(allStates) <= 0) { //if statesObj is 0, then
+                statesObj.push(allStates);
               }
             });
 
-            $(".ajax-content").append("<ul><li>" +
-              "<a target='_blank' href='"+ uri +"' data-position-id='" + positionid + "'>" + org + "</a>" +
-              "<ul><li><b>Position Title:</b> "+ title +"</li><li><p><b>Job Locations: </b>"+ statesObj.join(", ") +"</p></li></ul>"
-            ).fadeIn();
 
+            $(".ajax-content").append("<ul><li>" +
+              "<a target='_blank' href='"+ uri +"' data-position-id='" + positionid + "'>" + title + "</a>" +
+              "<ul><li><b>Department:</b> "+ org +"</li><li><p><b>Job Locations: </b><span class='stateList'>"+ statesObj.join(", ").substring(1) +"</span></p></li></ul>"
+            ).fadeIn();
           });
+
+          $(".region_area").html('Jobs for Region '+regionNumber+': ' + regionStates.replace(/\n/g, ", ")).fadeIn();
+
         }, error: function(){
           $(".ajax-content").empty();
         }, complete: function(){
-          $(".region_area").html('Region '+regionNumber+' Jobs').fadeIn();
+
           $(".loading").addClass("hidden");
           $('html, body').animate({
             // Grab the offset (position relative to document)
@@ -82,7 +85,6 @@
             $(".error").addClass("hidden");
           }
         }
-      //});
     });
   };
 
