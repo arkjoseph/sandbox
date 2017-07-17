@@ -175,7 +175,7 @@
      "number" : 11,
      "name" : "Central\nOffice\n&\nNational\nCapital\nRegion",
      "link" : "/r11",
-     "otherTerritory" : "Washington DC Metro Area",
+     "otherTerritory" : null,
      "colorOnMap" : "#28a1d8",
      "markerX" : 985,
      "markerY" : 400,

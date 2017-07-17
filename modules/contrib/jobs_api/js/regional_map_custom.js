@@ -148,11 +148,14 @@
             } else {
               //var regionStates = item.stateNames;
               //Drupal.jobs_api.feed(states,regionNumber,regionStates);
-              if (item.otherTerritory != null && item.stateNames.length < 1) {
+              if (item.otherTerritory != null && item.stateNames.length <= 2) {
                 var regionStates = item.otherTerritory;
                 Drupal.jobs_api.feed(states,regionNumber,regionStates);
               } else if (item.otherTerritory === null && item.stateNames.length > 1) {
                 regionStates = item.stateNames;
+                Drupal.jobs_api.feed(states,regionNumber,regionStates);
+              } else if (item.number == '11'){
+                regionStates = item.stateNames + "Washington DC Metro Area";
                 Drupal.jobs_api.feed(states,regionNumber,regionStates);
               } else {
                 regionStates = item.stateNames + ", " + item.otherTerritory;
@@ -208,7 +211,7 @@
               stroke: '#333',
               strokeWidth: 3
             });
-            var hoverText = s.text(1035, 450);
+            var hoverText = s.text(descriptionX + 25, markerDescriptionY + 32);
 
           } else {
             description = s.multitext(descriptionX, markerDescriptionY, item.name);
